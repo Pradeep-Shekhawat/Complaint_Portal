@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchComplaint, updateComplaintStatus } from "../service/api";
 import collegelogo from "/collegelogo.jpg";
 import teamlogo from "/teamlogo.jpeg";
+import '../styles/Complaint&Admin.css';
 
 function AdminDashboard() {
     const [complaint, setComplaint] = useState([]);
@@ -31,16 +32,15 @@ function AdminDashboard() {
         <div className="admindashboard">
             <div className="header">
                 <img src={collegelogo} alt="College Logo" className="collegelogo" />
-                <h1 className="heading">Complaint & Suggestion Form</h1>
+                <h1 className="heading">Admin Dashboard</h1>
                 <img src={teamlogo} alt="Team Logo" className="teamlogo" />
             </div>
             <div className="dashboard-container">
-                <h1>Admin Dashboard</h1>
                 <table>
                     <thead>
                         <tr>
                             <th>First Name</th>
-                            <th>Lasr Name</th>
+                            <th>Last Name</th>
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Department</th>
@@ -66,6 +66,21 @@ function AdminDashboard() {
                         ))}
                     </tbody>
                 </table>
+            </div>
+            <div className="footer">
+                <p>© 2025 Bharati Vidyapeeth. All rights reserved.</p>
+                <a href="xyz">
+                    <img src="instragram.com" alt="Instragram" />
+                </a>
+                <a href="xyz">
+                    <img src="linkedin.com" alt="LinkedIn" />
+                </a>
+                <a href="xyz">
+                    <img src="github.com" alt="GitHub" />
+                </a>
+                <a href="xyz">
+                    <img src="discord.com" alt="Discord" />
+                </a>
             </div>
         </div>
     );

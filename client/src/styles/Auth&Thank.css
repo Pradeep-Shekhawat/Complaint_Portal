@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffa500;
+}
+
+/* AuthForm Styles */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab div {
+    flex: 1;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #004080;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.tab div.active {
+    color: #ffa500;
+    border-bottom: 2px solid #ffa500;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* ThankYou Styles */
+.thankyou-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.thankyou-container button {
+    margin-top: 20px;
+}

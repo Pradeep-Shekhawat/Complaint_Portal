@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { submitComplaint } from "../service/api";
 import collegelogo from "/collegelogo.jpg";
 import teamlogo from "/teamlogo.jpeg";
+import '../styles/Complaint&Admin.css';
 
 function ComplaintForm() {
     const [formData, setFormData] = useState({ firstname: '', lastname: '', email: '', phone: '', department: '', type: '', complaint: '', suggestion: ''});
@@ -58,6 +59,21 @@ function ComplaintForm() {
                     <textarea name="suggestion" placeholder="Give Suggestion" onChange={handleChange} ></textarea>
                     <button type="submit">Submit</button>
                 </form>
+            </div>
+            <div className="footer">
+                <p>© 2025 Bharati Vidyapeeth. All rights reserved.</p>
+                <a href="xyz">
+                    <img src="instragram.com" alt="Instragram" />
+                </a>
+                <a href="xyz">
+                    <img src="linkedin.com" alt="LinkedIn" />
+                </a>
+                <a href="xyz">
+                    <img src="github.com" alt="GitHub" />
+                </a>
+                <a href="xyz">
+                    <img src="discord.com" alt="Discord" />
+                </a>
             </div>
         </div>
     );

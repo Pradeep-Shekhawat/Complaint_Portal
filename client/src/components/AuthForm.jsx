@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser, signupUser } from '../service/api';
+import '../styles/Auth&Thank.css';
 
 function AuthForm() {
     const [isLogin, setIsLogin] = useState(true);
