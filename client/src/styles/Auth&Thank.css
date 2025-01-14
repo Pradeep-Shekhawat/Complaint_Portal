@@ -1,37 +1,38 @@
-/* styles.css */
-
 /* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #f7f5f9; /* Light lavender background */
+    color: #4a4a4a; /* Dark gray text */
 }
 
 h1 {
     font-weight: bold;
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #5e548e; /* Purple heading */
 }
 
 p {
     font-size: 1rem;
     margin-bottom: 20px;
+    color: #4a4a4a;
 }
 
 button {
-    background-color: #004080;
+    background-color: #ff7f11; /* Vibrant orange */
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #ffa500;
+    background-color: #ffa41b; /* Lighter orange */
+    transform: scale(1.05); /* Subtle hover effect */
 }
 
 /* AuthForm Styles */
@@ -56,14 +57,14 @@ button:hover {
     padding: 10px 0;
     cursor: pointer;
     font-weight: bold;
-    color: #004080;
+    color: #5e548e; /* Purple */
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .tab div.active {
-    color: #ffa500;
-    border-bottom: 2px solid #ffa500;
+    color: #ff7f11; /* Orange for active tab */
+    border-bottom: 2px solid #ff7f11;
 }
 
 .form {
@@ -95,6 +96,16 @@ input::placeholder {
     text-align: center;
 }
 
+.thankyou-container h1 {
+    color: #5e548e; /* Purple heading */
+}
+
 .thankyou-container button {
     margin-top: 20px;
+    background-color: #5e548e; /* Purple button */
+    color: #fff;
+}
+
+.thankyou-container button:hover {
+    background-color: #7a668c; /* Lighter purple */
 }

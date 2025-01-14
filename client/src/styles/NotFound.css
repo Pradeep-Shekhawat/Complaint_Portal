@@ -1,39 +1,38 @@
-/* styles.css */
-
 /* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #f1f7f1; /* Light green background */
+    color: #333; /* Neutral dark gray text */
 }
 
 h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #004080;
+    color: #00796b; /* Dark teal heading */
 }
 
 p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    color: #555;
+    color: #5a5a5a; /* Neutral gray for paragraph text */
 }
 
 button {
-    background-color: #004080;
+    background-color: #00796b; /* Dark teal button */
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #ffa500;
+    background-color: #66bb6a; /* Light green hover */
+    transform: scale(1.05); /* Subtle hover enlargement */
 }
 
 /* NotFound Styles */
@@ -44,15 +43,28 @@ button:hover {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    background-color: #fff;
+    background-color: #fff; /* White background for clarity */
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .notfound-container h1 {
     margin-bottom: 10px;
+    color: #00796b; /* Dark teal for heading */
 }
 
 .notfound-container p {
     margin-bottom: 30px;
+    color: #5a5a5a; /* Neutral gray text */
+}
+
+.notfound-container button {
+    background-color: #00796b; /* Teal button */
+    color: #fff;
+    font-weight: bold;
+}
+
+.notfound-container button:hover {
+    background-color: #66bb6a; /* Light green hover */
+    transform: scale(1.1); /* Slightly larger hover effect */
 }

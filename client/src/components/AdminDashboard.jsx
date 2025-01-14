@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { fetchComplaint, updateComplaintStatus } from "../service/api";
 import collegelogo from "/collegelogo.jpg";
 import teamlogo from "/teamlogo.jpeg";
+import instagram from "/instagram.jpg";
+import linkedin from "/linkedin.jpg";
+import github from "/github.jpg";
+import discord from "/discord.jpg";
 import '../styles/Complaint&Admin.css';
 
 function AdminDashboard() {
@@ -70,16 +74,16 @@ function AdminDashboard() {
             <div className="footer">
                 <p>© 2025 Bharati Vidyapeeth. All rights reserved.</p>
                 <a href="xyz">
-                    <img src="instragram.com" alt="Instragram" />
+                    <img src={instagram} alt="Instragram" />
                 </a>
                 <a href="xyz">
-                    <img src="linkedin.com" alt="LinkedIn" />
+                    <img src={linkedin} alt="LinkedIn" />
                 </a>
                 <a href="xyz">
-                    <img src="github.com" alt="GitHub" />
+                    <img src={github} alt="GitHub" />
                 </a>
                 <a href="xyz">
-                    <img src="discord.com" alt="Discord" />
+                    <img src={discord} alt="Discord" />
                 </a>
             </div>
         </div>
