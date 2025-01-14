@@ -5,6 +5,11 @@ import { submitComplaint } from "../service/api";
 import collegelogo from "/collegelogo.jpg";
 import teamlogo from "/teamlogo.jpeg";
 import '../styles/Complaint&Admin.css';
+import React from "react";
+import discord from "/discord.jpg";
+import github from "/github.jpg";
+import instagram from "/instagram.jpg";
+import linkedin from "/linkedin.jpg";
 
 function ComplaintForm() {
     const [formData, setFormData] = useState({ firstname: '', lastname: '', email: '', phone: '', department: '', type: '', complaint: '', suggestion: ''});
@@ -63,16 +68,16 @@ function ComplaintForm() {
             <div className="footer">
                 <p>© 2025 Bharati Vidyapeeth. All rights reserved.</p>
                 <a href="xyz">
-                    <img src="instragram.com" alt="Instragram" />
+                    <img src={instagram} alt="Instragram" />
                 </a>
                 <a href="xyz">
-                    <img src="linkedin.com" alt="LinkedIn" />
+                    <img src={linkedin} alt="LinkedIn" />
                 </a>
                 <a href="xyz">
-                    <img src="github.com" alt="GitHub" />
+                    <img src={github} alt="GitHub" />
                 </a>
                 <a href="xyz">
-                    <img src="discord.com" alt="Discord" />
+                    <img src={discord} alt="Discord" />
                 </a>
             </div>
         </div>
