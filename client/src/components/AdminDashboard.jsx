@@ -13,7 +13,7 @@ function AdminDashboard() {
 
     useEffect(() => {
         const fetchData = async() => {
-            const token = localStorage.getItem('token');
+            const token = sessionStorage.getItem('token');
             try {
                 const res = await fetchComplaint(token);
                 setComplaint(res.data);
@@ -26,7 +26,7 @@ function AdminDashboard() {
     });
 
     const handleStatusChange = async (id, newStatus) => {
-        const token = localStorage.getItem('token');
+        const token = sessionStorage.getItem('token');
         await updateComplaintStatus(id, newStatus, token);
         setComplaint(complaint.map((c) =>
         c._id === id ? { ...c, status: newStatus } : c));
@@ -58,14 +58,25 @@ function AdminDashboard() {
                     <tbody>
                         {complaint.map((complaint) => (
                             <tr key={complaint._id}>
-                                <td>{complaint.user?.firstname}</td>
-                                <td>{complaint.user?.lastname}</td>
-                                <td>{complaint.user?.email}</td>
-                                <td>{complaint.user?.phone}</td>
-                                <td>{complaint.departement}</td>
+                                <td>{complaint.firstname}</td>
+                                <td>{complaint.lastname}</td>
+                                <td>{complaint.email}</td>
+                                <td>{complaint.phone}</td>
+                                <td>{complaint.department}</td>
+                                <td>{complaint.type}</td>
+                                <td>{complaint.complaint}</td>
                                 <td>{complaint.suggestion}</td>
                                 <td>{complaint.status}</td>
-                                <td><select value={complaint.status} onChange={(e) => handleStatusChange(complaint._id, e.target.value)}></select></td>
+                                <td>
+                                <select
+                                 value={complaint.status}
+                                 onChange={(e) => handleStatusChange(complaint._id, e.target.value)}
+                                >
+                                    <option value="Pending">Pending</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Resolved">Resolved</option>
+                                </select>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

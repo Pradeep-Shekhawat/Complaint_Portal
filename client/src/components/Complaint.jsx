@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { submitComplaint } from "../service/api";
 import collegelogo from "/collegelogo.jpg";
 import teamlogo from "/teamlogo.jpeg";
-import '../styles/Complaint&Admin.css';
-import React from "react";
 import discord from "/discord.jpg";
 import github from "/github.jpg";
 import instagram from "/instagram.jpg";
 import linkedin from "/linkedin.jpg";
+import '../styles/Complaint&Admin.css';
+
 
 function ComplaintForm() {
     const [formData, setFormData] = useState({ firstname: '', lastname: '', email: '', phone: '', department: '', type: '', complaint: '', suggestion: ''});
@@ -22,7 +22,7 @@ function ComplaintForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const token = localStorage.getItem('token');
+        const token = sessionStorage.getItem('token');
         try {
             await submitComplaint(formData, token);
             navigate('/thankyou');

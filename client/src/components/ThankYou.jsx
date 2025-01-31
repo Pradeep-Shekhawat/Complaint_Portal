@@ -6,14 +6,14 @@ function ThankYou() {
     const navigate = useNavigate();
 
     const handleReturn = () => {
-        navigate('/complaint');
+        navigate('/complaints');
     };
 
     return(
         <div className="thankyou-container">
             <h1>Thank You</h1>
             <p>Your complaint or suggestion has been submitted successfully.</p>
-            <button onClick={handleReturn}>Subtim Another</button>
+            <button onClick={handleReturn}>Submit Another</button>
         </div>
     );
 }

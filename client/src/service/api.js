@@ -10,18 +10,25 @@ export const loginUser = (data) => api.post('/auth/login', data);
 
 //Complaint
 export const submitComplaint = (data, token) =>
-    api.post('/complaint', data, {
+    api.post('/complaints', data, {
         headers: { Authorization: `Bearer ${token}`}
     });
 
 // Fetching complaint for Admin
-export const fetchComplaint = (taken) => 
-    api.get('/complain', {
+export const fetchComplaint = (token) => 
+    api.get('/complaints', {
         headers: { Authorization: `Bearer ${token}`}
     });
 
 //Showing complaint status
 export const updateComplaintStatus = (id, status, token) =>
-    api.put(`/complaint/${id}`, { status }, {
+    api.put(`/complaints/${id}`, { status }, {
         headers: { Authorization: `Bearer ${token}`}
     });
+
+//Fetching complaint for user
+export const fetchComplaintStatus = async (token) => {
+    return await api.get("/complaints/status", {
+        headers: { Authorization: `Bearer ${token}` },
+    });
+};

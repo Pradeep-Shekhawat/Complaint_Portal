@@ -1,16 +1,18 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f7f5f9; /* Light lavender background */
     color: #4a4a4a; /* Dark gray text */
+    line-height: 1.6;
 }
 
 h1 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #5e548e; /* Purple heading */
+    text-align: center;
 }
 
 p {
@@ -23,38 +25,44 @@ button {
     background-color: #ff7f11; /* Vibrant orange */
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
     background-color: #ffa41b; /* Lighter orange */
     transform: scale(1.05); /* Subtle hover effect */
+    box-shadow: 0 4px 12px rgba(255, 167, 27, 0.3); /* Glow effect on hover */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 167, 27, 0.4); /* Focus outline for accessibility */
 }
 
 /* AuthForm Styles */
 .container {
-    max-width: 400px;
+    max-width: 420px;
     margin: 50px auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .tab {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .tab div {
     flex: 1;
-    padding: 10px 0;
+    padding: 12px 0;
     cursor: pointer;
     font-weight: bold;
     color: #5e548e; /* Purple */
@@ -70,19 +78,25 @@ button:hover {
 .form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
-input {
+input, select, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-input::placeholder {
+input::placeholder, select::placeholder, textarea::placeholder {
     color: #aaa;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ff7f11; /* Highlight border on focus */
+    outline: none;
 }
 
 /* ThankYou Styles */
@@ -92,20 +106,55 @@ input::placeholder {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .thankyou-container h1 {
     color: #5e548e; /* Purple heading */
+    font-size: 2rem;
+}
+
+.thankyou-container p {
+    font-size: 1rem;
+    color: #666;
 }
 
 .thankyou-container button {
     margin-top: 20px;
     background-color: #5e548e; /* Purple button */
     color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 5px;
 }
 
 .thankyou-container button:hover {
     background-color: #7a668c; /* Lighter purple */
+    box-shadow: 0 4px 12px rgba(92, 66, 123, 0.3);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .tab {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form {
+        gap: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }
