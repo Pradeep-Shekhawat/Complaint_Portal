@@ -1,72 +1,50 @@
-/* Options Page */
+/* ComplaintOptions.css */
 .options-page {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-}
-
-/* Header Styles */
-.header {
-    background-color: #004d66; /* Dark blue */
-    color: white;
-    padding: 15px;
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+  }
+  
+  .header {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .collegelogo {
+    max-height: 60px;
+  }
+  
+  .options-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-}
-
-.header img {
-    height: 50px;
-}
-
-/* Options Container */
-.options-container {
-    margin-top: 40px;
-}
-
-.options-container h2 {
-    font-size: 1.75rem; /* Adjusted font size for better readability */
+    padding: 20px;
+  }
+  
+  .options-container h2 {
     margin-bottom: 20px;
-    color: #004d66; /* Dark blue color for headings */
-}
-
-/* Button Styles */
-.button {
-    padding: 12px 24px;
+    color: #004080;
+  }
+  
+  .button {
+    padding: 12px 20px;
     margin: 10px;
-    font-size: 16px;
-    background-color: #004d66; /* Consistent color */
-    color: white;
+    background-color: #004080;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button:hover {
-    background-color: #006d87; /* Lighter blue on hover */
-    transform: scale(1.05);
-}
-
-.button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 109, 119, 0.8); /* Added focus state for better accessibility */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .options-page {
-        padding: 15px;
-    }
-
-    .options-container h2 {
-        font-size: 1.5rem; /* Slightly smaller heading on smaller screens */
-    }
-
-    .button {
-        padding: 10px 20px;
-        font-size: 14px; /* Adjust button size on mobile */
-    }
-}
+    width: 220px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #003060;
+  }  

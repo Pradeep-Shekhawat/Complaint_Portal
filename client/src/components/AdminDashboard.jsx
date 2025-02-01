@@ -6,7 +6,7 @@ import instagram from "/instagram.jpg";
 import linkedin from "/linkedin.jpg";
 import github from "/github.jpg";
 import discord from "/discord.jpg";
-import '../styles/Complaint&Admin.css';
+import '../styles/AdminDashboard.css';
 
 function AdminDashboard() {
     const [complaint, setComplaint] = useState([]);
@@ -87,7 +87,7 @@ function AdminDashboard() {
                 <a href="xyz">
                     <img src={instagram} alt="Instragram" />
                 </a>
-                <a href="xyz">
+                <a href="www.linkedin.com/in/shekhawatpradeepsingh">
                     <img src={linkedin} alt="LinkedIn" />
                 </a>
                 <a href="xyz">

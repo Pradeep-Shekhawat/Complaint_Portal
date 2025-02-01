@@ -8,7 +8,7 @@ const ComplaintStatus = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const token = sessionStorage.getItem("token"); // Use sessionStorage for improved security
+      const token = sessionStorage.getItem("token");
       try {
         const res = await fetchComplaintStatus(token);
         setComplaints(res.data);

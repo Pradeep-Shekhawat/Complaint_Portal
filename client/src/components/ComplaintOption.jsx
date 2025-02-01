@@ -11,7 +11,7 @@ function ComplaintOptions() {
     };
 
     const handleFileComplaint = () => {
-        navigate("/complaints"); // Navigate to File Complaint page
+        navigate("/complaints"); // Navigate to Complaint page
     };
 
     return (

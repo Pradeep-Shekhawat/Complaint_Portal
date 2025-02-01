@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../styles/Auth&Thank.css';
+import '../styles/ThankYou.css';
 
 function ThankYou() {
     const navigate = useNavigate();

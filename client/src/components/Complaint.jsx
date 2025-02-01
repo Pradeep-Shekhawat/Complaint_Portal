@@ -8,7 +8,7 @@ import discord from "/discord.jpg";
 import github from "/github.jpg";
 import instagram from "/instagram.jpg";
 import linkedin from "/linkedin.jpg";
-import '../styles/Complaint&Admin.css';
+import '../styles/Complaint.css';
 
 
 function ComplaintForm() {
@@ -70,7 +70,7 @@ function ComplaintForm() {
                 <a href="xyz">
                     <img src={instagram} alt="Instragram" />
                 </a>
-                <a href="xyz">
+                <a href="www.linkedin.com/in/shekhawatpradeepsingh">
                     <img src={linkedin} alt="LinkedIn" />
                 </a>
                 <a href="xyz">

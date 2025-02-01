@@ -1,5 +1,5 @@
-/* NotFound.css */
-.notfound-container {
+/* ThankYou.css */
+.thankyou-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,18 +11,18 @@
     padding: 20px;
   }
   
-  .notfound-container h1 {
-    font-size: 3rem;
+  .thankyou-container h1 {
+    font-size: 2.5rem;
     color: #004080;
     margin-bottom: 20px;
   }
   
-  .notfound-container p {
+  .thankyou-container p {
     font-size: 1.2rem;
     margin-bottom: 20px;
   }
   
-  .notfound-container button {
+  .thankyou-container button {
     padding: 10px 20px;
     background-color: #004080;
     color: #fff;
@@ -32,6 +32,6 @@
     transition: background-color 0.3s ease;
   }
   
-  .notfound-container button:hover {
+  .thankyou-container button:hover {
     background-color: #003060;
   }  

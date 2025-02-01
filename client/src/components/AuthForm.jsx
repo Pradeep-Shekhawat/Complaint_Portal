@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser, signupUser } from "../service/api";
-import "../styles/Auth&Thank.css";
+import "../styles/Auth.css";
 import { jwtDecode } from "jwt-decode";
 
 function AuthForm() {
