@@ -1,37 +1,40 @@
 /* NotFound.css */
 .notfound-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-    background: #f5f5f5;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .notfound-container h1 {
-    font-size: 3rem;
-    color: #004080;
-    margin-bottom: 20px;
-  }
-  
-  .notfound-container p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .notfound-container button {
-    padding: 10px 20px;
-    background-color: #004080;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .notfound-container button:hover {
-    background-color: #003060;
-  }  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+  text-align: center;
+  padding: 20px;
+}
+
+.notfound-container h1 {
+  font-size: 3rem;
+  color: #1e5b82;
+  margin-bottom: 20px;
+}
+
+.notfound-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.notfound-container button {
+  padding: 12px 24px;
+  background-color: #1e5b82;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.notfound-container button:hover {
+  background-color: #174a67;
+  transform: translateY(-2px);
+}
