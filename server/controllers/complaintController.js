@@ -1,61 +1,58 @@
 const Complaint = require('../module/Complaint');
+const asyncHandler = require('express-async-handler');
 
-exports.submitComplaint = async (req, res) => {
-    const { firstname, lastname, email, phone, department, type, complaint, suggestion } = req.body;
-    try {
-        const newComplaint = await Complaint.create({
-            user: req.user.id,
-            firstname,
-            lastname,
-            email,
-            phone,
-            department,
-            type,
-            complaint,
-            suggestion,
-        });
-        res.status(201).json({ message: 'Complaint submitted successfully', complaint: newComplaint });
-    } catch (err) {
-        res.status(500).json({ message: 'Error submitting complaint', error: err.message });
-    }
-};
+// Submit a complaint
+exports.submitComplaint = asyncHandler(async (req, res) => {
+  const { firstname, lastname, email, phone, department, type, complaint, suggestion } = req.body;
 
-exports.fetchComplaint = async (req, res) => {
-    if (req.user.role !== 'admin') return res.status(403).json({ message: 'Access Denied' });
+  const newComplaint = await Complaint.create({
+    user: req.user.id,
+    firstname,
+    lastname,
+    email,
+    phone,
+    department,
+    type,
+    complaint,
+    suggestion,
+  });
 
-    try {
-        const complaints = await Complaint.find().populate('user', 'name email');
-        res.status(200).json(complaints);
-    } catch (err) {
-        res.status(500).json({ message: 'Error fetching complaints', error: err.message });
-    }
-};
+  res.status(201).json({ message: 'Complaint submitted successfully', complaint: newComplaint });
+});
 
-exports.updateComplaintStatus = async (req, res) => {
-    if (req.user.role !== 'admin') return res.status(403).json({ message: 'Access Denied' });
+// Fetch all complaints (admin only)
+exports.fetchComplaint = asyncHandler(async (req, res) => {
+  if (req.user.role !== 'admin') {
+    res.status(403);
+    throw new Error('Access Denied');
+  }
 
-    const { status } = req.body;
-    try {
-        const updatedComplaint = await Complaint.findByIdAndUpdate(
-            req.params.id,
-            { status },
-            { new: true }
-        );
-        if (!updatedComplaint) return res.status(404).json({ message: 'Complaint not found' });
-        res.status(200).json(updatedComplaint);
-    } catch (err) {
-        res.status(500).json({ message: 'Error updating complaint status', error: err.message });
-    }
-};
+  const complaints = await Complaint.find().populate('user', 'name email');
+  res.status(200).json(complaints);
+});
 
-exports.fetchComplaintStatus = async (req, res) => {
-    try {
-        const complaints = await Complaint.find({ user: req.user.id });
-        if (!complaints.length) {
-            return res.status(404).json({ message: 'No complaints found for this user.' });
-        }
-        res.status(200).json(complaints);
-    } catch (error) {
-        res.status(500).json({ message: 'Failed to fetch complaint status.', error: error.message });
-    }
-};
+// Update the status of a complaint (admin only)
+exports.updateComplaintStatus = asyncHandler(async (req, res) => {
+  if (req.user.role !== 'admin') {
+    res.status(403);
+    throw new Error('Access Denied');
+  }
+
+  const { status } = req.body;
+  const updatedComplaint = await Complaint.findByIdAndUpdate(req.params.id, { status }, { new: true });
+  if (!updatedComplaint) {
+    res.status(404);
+    throw new Error('Complaint not found');
+  }
+  res.status(200).json(updatedComplaint);
+});
+
+// Fetch complaints for the logged-in user
+exports.fetchComplaintStatus = asyncHandler(async (req, res) => {
+  const complaints = await Complaint.find({ user: req.user.id });
+  if (!complaints.length) {
+    res.status(404);
+    throw new Error('No complaints found for this user.');
+  }
+  res.status(200).json(complaints);
+});

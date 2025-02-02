@@ -16,9 +16,10 @@ function ComplaintOptions() {
 
     return (
         <div className="options-page">
-            <div className="header">
+           <div className="header">
                 <img src={collegelogo} alt="College Logo" className="collegelogo" />
-                <h1>Welcome</h1>
+                <h1 className="heading">Admin Dashboard</h1>
+                <img src={teamlogo} alt="Team Logo" className="teamlogo" />
             </div>
             <div className="options-container">
                 <h2>What would you like to do?</h2>
@@ -28,6 +29,21 @@ function ComplaintOptions() {
                 <button onClick={handleFileComplaint} className="button">
                     File a New Complaint
                 </button>
+            </div>
+            <div className="footer">
+                <p>© 2025 Bharati Vidyapeeth. All rights reserved.</p>
+                <a href="xyz">
+                <img src={instagram} alt="Instragram" />
+                </a>
+                <a href="https://www.linkedin.com/in/shekhawatpradeepsingh" target="_blank" rel="noopener noreferrer">
+                <img src={linkedin} alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/Pradeep-Shekhawat/Complaint_Portal/tree/main" target="_blank" rel="noopener noreferrer">
+                <img src={github} alt="GitHub" />
+                </a>
+                <a href="xyz">
+                <img src={discord} alt="Discord" />
+                </a>
             </div>
         </div>
     );

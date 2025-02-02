@@ -87,10 +87,10 @@ function AdminDashboard() {
                 <a href="xyz">
                     <img src={instagram} alt="Instragram" />
                 </a>
-                <a href="www.linkedin.com/in/shekhawatpradeepsingh">
+                <a href="https://www.linkedin.com/in/shekhawatpradeepsingh" target="_blank" rel="noopener noreferrer">
                     <img src={linkedin} alt="LinkedIn" />
                 </a>
-                <a href="xyz">
+                <a href="https://github.com/Pradeep-Shekhawat/Complaint_Portal/tree/main" target="_blank" rel="noopener noreferrer">
                     <img src={github} alt="GitHub" />
                 </a>
                 <a href="xyz">

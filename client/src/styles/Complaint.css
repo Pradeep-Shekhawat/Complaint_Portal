@@ -1,22 +1,25 @@
 /* Complaint.css */
-.form {
-  max-width: 700px;
-  margin: 40px auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/* Overall page container to ensure full width for header and footer */
+.complaint-page {
+  width: 100%;
+  font-family: 'Arial', sans-serif;
 }
 
+/* Header styling: full width */
 .header {
-  background: linear-gradient(135deg, #1e5b82, #3a7bb5);
+  width: 100%;
+  background: linear-gradient(135deg, #0a3d62, #1e5b82);
   color: #fff;
-  padding: 25px 20px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Logo images in header */
 .collegelogo,
 .teamlogo {
   max-height: 60px;
@@ -29,22 +32,29 @@
   transform: scale(1.05);
 }
 
+/* Title styling within header */
 .heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   flex: 1;
-  margin: 0 20px;
 }
 
+/* Form container: occupies 60% of the screen, centered */
+.form {
+  width: 60%;
+  margin: 40px auto; /* adds some vertical spacing too */
+}
+
+/* Inner container for the actual form fields */
 .container {
   background: #fff;
-  padding: 30px 25px;
-  border: 1px solid #e0e0e0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
+/* Form fields layout */
 .container form {
   display: flex;
   flex-direction: column;
@@ -53,71 +63,60 @@
 .container input,
 .container select,
 .container textarea {
-  padding: 12px;
-  margin: 12px 0;
-  border: 1px solid #c8c8c8;
-  border-radius: 6px;
-  transition: border-color 0.3s ease;
-  font-size: 1rem;
-}
-
-.container input:focus,
-.container select:focus,
-.container textarea:focus {
-  border-color: #1e5b82;
-  outline: none;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .container button {
-  padding: 14px;
-  background-color: #1e5b82;
+  padding: 10px;
+  background-color: #004080;
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  margin-top: 15px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .container button:hover {
-  background-color: #174a67;
-  transform: scale(1.02);
+  background-color: #003060;
 }
 
+/* Footer styling: full width */
 .footer {
-  background: linear-gradient(135deg, #1e5b82, #3a7bb5);
+  width: 100%;
+  background-color: #004080;
   color: #fff;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
-  margin-top: 30px;
-  border-radius: 6px;
+  margin-top: 20px;
 }
 
 .footer img {
   width: 30px;
-  margin: 0 7px;
+  margin: 0 5px;
   vertical-align: middle;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.footer img:hover {
-  transform: scale(1.1);
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  /* For smaller screens, header and footer layout */
   .header,
   .footer {
     flex-direction: column;
     text-align: center;
   }
+  
   .collegelogo,
   .teamlogo {
     margin-bottom: 10px;
   }
-  .heading {
-    margin: 10px 0;
-    font-size: 1.8rem;
+  
+  /* Expand the form container width on small screens */
+  .form {
+    width: 90%;
   }
 }

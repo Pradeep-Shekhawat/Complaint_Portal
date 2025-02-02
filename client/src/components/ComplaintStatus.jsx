@@ -26,7 +26,11 @@ const ComplaintStatus = () => {
 
   return (
     <div className="status-page">
-      <h1>Your Complaints</h1>
+      <div className="header">
+        <img src={collegelogo} alt="College Logo" className="collegelogo" />
+        <h1 className="heading">Admin Dashboard</h1>
+        <img src={teamlogo} alt="Team Logo" className="teamlogo" />
+      </div>
       <div className="table-container">
         <table>
           <thead>
