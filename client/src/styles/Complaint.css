@@ -1,122 +1,55 @@
 /* Complaint.css */
-
-/* Overall page container to ensure full width for header and footer */
-.complaint-page {
-  width: 100%;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Header styling: full width */
-.header {
-  width: 100%;
-  background: linear-gradient(135deg, #0a3d62, #1e5b82);
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Logo images in header */
-.collegelogo,
-.teamlogo {
-  max-height: 60px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.collegelogo:hover,
-.teamlogo:hover {
-  transform: scale(1.05);
-}
-
-/* Title styling within header */
-.heading {
-  font-size: 1.8rem;
-  text-align: center;
-  flex: 1;
-}
-
-/* Form container: occupies 60% of the screen, centered */
-.form {
-  width: 60%;
-  margin: 40px auto; /* adds some vertical spacing too */
-}
-
-/* Inner container for the actual form fields */
-.container {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-/* Form fields layout */
-.container form {
+.complaint-form {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #f9fafc;
 }
 
-.container input,
-.container select,
-.container textarea {
-  padding: 10px;
-  margin: 10px 0;
+.container {
+  flex-grow: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+textarea {
+  padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
-.container button {
-  padding: 10px;
-  background-color: #004080;
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 0.75rem;
+  background: #3a7bd5;
   color: #fff;
   border: none;
   border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.container button:hover {
-  background-color: #003060;
-}
-
-/* Footer styling: full width */
-.footer {
-  width: 100%;
-  background-color: #004080;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.footer img {
-  width: 30px;
-  margin: 0 5px;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  /* For smaller screens, header and footer layout */
-  .header,
-  .footer {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .collegelogo,
-  .teamlogo {
-    margin-bottom: 10px;
-  }
-  
-  /* Expand the form container width on small screens */
-  .form {
-    width: 90%;
-  }
+button:hover {
+  background: #325ea8;
 }

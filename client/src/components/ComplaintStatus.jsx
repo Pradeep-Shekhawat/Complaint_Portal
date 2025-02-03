@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { fetchComplaintStatus } from "../service/api";
+import Header from "./Header";
+import Footer from "./Footer";
+import "../styles/ComplaintStatus.css";
 
 const ComplaintStatus = () => {
   const [complaints, setComplaints] = useState([]);
@@ -14,23 +17,23 @@ const ComplaintStatus = () => {
         setComplaints(res.data);
         setLoading(false);
       } catch (err) {
-        setError(`Failed to fetch complaints: ${err.response?.data?.message || err.message}`);
+        setError(
+          `Failed to fetch complaints: ${
+            err.response?.data?.message || err.message
+          }`
+        );
         setLoading(false);
       }
     };
     fetchData();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <div className="loading">Loading...</div>;
+  if (error) return <div className="error">Error: {error}</div>;
 
   return (
     <div className="status-page">
-      <div className="header">
-        <img src={collegelogo} alt="College Logo" className="collegelogo" />
-        <h1 className="heading">Admin Dashboard</h1>
-        <img src={teamlogo} alt="Team Logo" className="teamlogo" />
-      </div>
+      <Header title="Complaint Status" />
       <div className="table-container">
         <table>
           <thead>
@@ -63,6 +66,7 @@ const ComplaintStatus = () => {
           </tbody>
         </table>
       </div>
+      <Footer />
     </div>
   );
 };

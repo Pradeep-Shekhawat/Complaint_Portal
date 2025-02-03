@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import AuthForm from "./components/AuthForm";
+import Auth from "./components/Auth";
 import ComplaintForm from "./components/Complaint";
 import ThankYou from "./components/ThankYou";
 import AdminDashboard from "./components/AdminDashboard";
@@ -12,7 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<AuthForm />} />
+      <Route path="/" element={<Auth />} />
       <Route path="/complaints" element={<ComplaintForm />} />
       <Route path="/thankyou" element={<ThankYou />} />
       <Route path="/admin" element={<AdminDashboard />} />
