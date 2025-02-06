@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Header.css";
 import collegelogo from "/collegelogo.jpg";
-import teamlogo from "/teamlogo.jpeg";
+import teamlogo from "/teamlogo.jpg";
 
 const Header = ({ title }) => {
   return (
